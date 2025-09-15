@@ -19,3 +19,6 @@ print(l[6][-3])#puedes hacer que empiece por la derecha con - delante del nombre
 
 #Partidas
 print(l[2:5])
+print(l[4][1:3])
+print(l[:-3])
+print(l[1:5:2])
