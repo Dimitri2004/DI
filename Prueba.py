@@ -1,0 +1,9 @@
+"""Colecciones
+
+    Listas
+
+    Tuplas
+
+    Diccionarios
+
+"""
