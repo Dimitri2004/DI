@@ -23,6 +23,8 @@ print(type(complejo))
 
 
 #cadenas
+'''Comentarios con
+ comillas simpleas'''
 
 cadena = "Esto es una cadena con comillas 'simples'"
 cadena2 = 'Esto es una cadena con comillas "dobles"'
