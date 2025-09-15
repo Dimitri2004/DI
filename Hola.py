@@ -33,4 +33,4 @@ print(cadena,"\n",cadena2)
 
 #Operadores Arigmeticos
 
-#(+,-,*,/,**,//) -> operadores simples
+#(+,-,*,/,**,//,%) -> operadores simples
