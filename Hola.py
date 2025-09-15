@@ -31,3 +31,6 @@ cadena2 ='Esto es una cadena con comillas "dobles"'
 print(cadena,"\n",cadena2)
 
 
+#Operadores Arigmeticos
+
+#(+,-,*,/) -> operadores simples
