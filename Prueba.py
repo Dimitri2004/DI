@@ -29,3 +29,5 @@ print(l[::-1])
 t=(2,5,2+3j, "Alberto",[1,3,4,5,6],6,9) #Elementos inmutables dentro de la tupla
 t[4][3]=2
 print(t)
+t2=5,
+print(type(t2))
