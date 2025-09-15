@@ -47,3 +47,11 @@ cad2="b"
 
 print(cad+cad2)
 print(cad*3)
+#operadores booleanos
+
+#java           &&      ||      !
+
+#python         and     or      not
+
+#standar        ==      !=      < >     <= =>
+
