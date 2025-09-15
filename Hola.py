@@ -26,8 +26,8 @@ print(type(complejo))
 '''Comentarios con
  comillas simpleas'''
 
-cadena = "Esto es una cadena con comillas 'simples'"
-cadena2 = 'Esto es una cadena con comillas "dobles"'
-print(cadena)
-print(cadena2)
+cadena ="Esto es una cadena con comillas 'simples'"
+cadena2 ='Esto es una cadena con comillas "dobles"'
+print(cadena,"\n",cadena2)
+
 
