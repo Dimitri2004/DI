@@ -40,3 +40,10 @@ print(cadena,"\n",cadena2)
 #(~,>>,<<)->desplazamiento divide entre 2,4,... bits
 print(~7)
 print(16>>3)
+
+#operadores de cadenas + *
+cad="a"
+cad2="b"
+
+print(cad+cad2)
+print(cad*3)
