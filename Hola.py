@@ -1,3 +1,6 @@
+"""Comentario multilineal
+para varios apartados"""
+
 #numeros
 from xmlrpc.client import boolean
 
@@ -13,14 +16,14 @@ print(type(numFlotante))
 #boleanos
 booleano = True #El true es 0 el False es 1
 print(type(booleano))
+
 #complejos
-
 complejo = 2.5 + 9.3j
-
 print(type(complejo))
 
 
 #cadenas
+
 cadena = "Esto es una cadena con comillas 'simples'"
 cadena2 = 'Esto es una cadena con comillas "dobles"'
 print(cadena)
