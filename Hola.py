@@ -36,7 +36,7 @@ print(cadena,"\n",cadena2)
 #(+,-,*,/,**,//,%) -> operadores simples
 
 #Operadores a nivel de bit
-# (&,|)->operadores a nivel bit
+# (&,|,^)->operadores a nivel bit
 #(~,>>,<<)->desplazamiento divide entre 2,4,... bits
 print(~7)
-print(10>>2)
+print(16>>3)
