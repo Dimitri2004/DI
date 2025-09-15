@@ -34,3 +34,6 @@ print(cadena,"\n",cadena2)
 #Operadores Arigmeticos
 
 #(+,-,*,/,**,//,%) -> operadores simples
+
+#Operadores a nivel de bit
+# (&,|)->operadores a nivel bit
