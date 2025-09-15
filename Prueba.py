@@ -15,4 +15,7 @@ print(type(l))
 l[4]= "marcelo"
 l[6]=[1,2,3,4]
 
-print(l[6])#puedes hacer que empiece por la derecha con - delante del nombre de la lista
+print(l[6][-3])#puedes hacer que empiece por la derecha con - delante del nombre de la lista
+
+#Partidas
+print(l[2:5])
