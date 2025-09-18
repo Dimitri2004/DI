@@ -50,4 +50,9 @@ def funtion2(lista):
 print(funtion2(var))
 
 
-def
+def funtion3(lista):
+    suma = 0
+    for num in lista:
+        suma = suma + num
+    return suma, suma/len(lista)
+print(funtion3(var))
