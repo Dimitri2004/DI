@@ -31,3 +31,13 @@ t[4][3]=2
 print(t)
 t2=5,
 print(type(t2)) #Es posible su salida de diferentes formas sin cambiar su contenido
+
+#Condiciones
+
+numeros=[1,2,3,4,5,20,45,67,3,4,5,6,7,8]
+for numeros in range(5):
+    print(numeros)
+
+
+for indice in range(3,10,3):
+    print(numeros[indice])
