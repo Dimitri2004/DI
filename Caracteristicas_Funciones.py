@@ -30,7 +30,7 @@ def persoa(nome,dni,**maisDatos):
     for dato in maisDatos.keys():
         print("La ",dato," é:",maisDatos[dato])
 
-persoa("Dima","7754623M",edad=21,localidad="ponevedra",ocupacion=False)
+persoa("Dima","7754623M",edad=21,localidad="ponevedra",ocupacion=False)#Añade mas datosrelevantes a la funcion o objeto al que se lo queramos añadir
 
 
 
