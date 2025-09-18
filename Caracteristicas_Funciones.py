@@ -55,4 +55,5 @@ def funtion3(lista):
     for num in lista:
         suma = suma + num
     return suma, suma/len(lista)
-print(funtion3(var))#divir variables para que el resultado se asigne a dos variables distintas, suma y media
+_,b=funtion3(var)
+print(b)#divir variables para que el resultado se asigne a dos variables distintas, suma y media
