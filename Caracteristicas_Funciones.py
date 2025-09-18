@@ -34,3 +34,20 @@ persoa("Dima","7754623M",edad=21,localidad="ponevedra",ocupacion=False)#Añade m
 
 
 
+var=[1,2,3]
+def funtion(parametro):
+    parametro[0]=3
+    parametro[1]=7
+    parametro[2]=20
+funtion(var)
+print(var)
+
+def funtion2(lista):
+    suma=0
+    for num in lista:
+        suma=suma+num
+    return suma
+print(funtion2(var))
+
+
+def
