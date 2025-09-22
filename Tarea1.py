@@ -48,7 +48,6 @@ def calculoHoras(segundos):
                 h=h-24
                 h=h+1
     print(h,m,s)
-
 #calculoHoras(60000000)
 calculoSegundos(72)
 #grad()
