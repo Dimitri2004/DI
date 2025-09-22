@@ -42,6 +42,7 @@ def calculoHoras(segundos):
         s=s-60
         m=m+1
         while  m>60:
+
             m=m-60
             h = h+1
             while h>24:
