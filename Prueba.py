@@ -39,19 +39,23 @@ for numeros in range(5):
     print(numeros)
 
 
-for indice in range(3,10,3):
-    #print(numeros[indice])
+"""for indice in range(3,10,3):
+    print(numeros[indice])
+    """
 
 
-    #Diccionarios
-    d={1: "uno",2:"dos",3:"tres"}#diccionario
+#Diccionarios
+d={1: "uno",2:"dos",3:"tres"}#diccionario
 
-    print(d[3])
+print(d[3])
 
-    l2=[1,2,3]#lista
-    l3=list((1,2,3))#tupla
+l2=[1,2,3]#lista
+l3=list((1,2,3))#tupla
 
-    t2=[1,2,3]
-    t3=tuple(l3)#Se puede crear tupla con listas
+t2=[1,2,3]
+t3=tuple(l3)#Se puede crear tupla con listas
+l3[0]=1000
+print(t3)
+print(t3,l3)
 
-    d2={1:"1",2:"11",3:"111"}
+d2={1:"1",2:"11",3:"111"}
