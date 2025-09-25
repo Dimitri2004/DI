@@ -40,4 +40,18 @@ for numeros in range(5):
 
 
 for indice in range(3,10,3):
-    print(numeros[indice])
+    #print(numeros[indice])
+
+
+    #Diccionarios
+    d={1: "uno",2:"dos",3:"tres"}#diccionario
+
+    print(d[3])
+
+    l2=[1,2,3]#lista
+    l3=list((1,2,3))#tupla
+
+    t2=[1,2,3]
+    t3=tuple(l3)#Se puede crear tupla con listas
+
+    d2={1:"1",2:"11",3:"111"}
