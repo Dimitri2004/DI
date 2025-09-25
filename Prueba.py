@@ -68,6 +68,11 @@ l2.insert(3,"Objeto en 4ª lugar")#añade en el lugar el objeto descrito
 print(l2.count(3))#busca el elemento y lo cuenta las veces en q se repita
 
 print(l2.index(3,3,7))#busca coincidencias a partir del inicio y fin de la lista
+extraer=l2.pop(5)#Quita el valor de la lista en la posicion asignada
+l2.remove(3)#elimina la primera coincidencia de la lista
+l2.reverse()#invirte la lista
+t3=l2[::-1]#la devuelve desinvirtiendola
+print("Elemento extraido :",extraer)
 print(l2)
-
+print(t3)
 
