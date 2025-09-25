@@ -59,3 +59,4 @@ print(t3)
 print(t3,l3)
 
 d2={1:"1",2:"11",3:"111"}
+d3=dict()#diccionario vacio
