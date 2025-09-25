@@ -60,3 +60,7 @@ print(t3,l3)
 
 d2={1:"1",2:"11",3:"111"}
 d3=dict()#diccionario vacio
+
+l2.append([3,2,1])#inserta el objeto en lista como único elemento
+l2.extend([3,(2,"Dos","11"),1])#añade como elementos a la lista
+print(l2)
