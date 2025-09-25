@@ -67,7 +67,7 @@ l2.insert(3,"Objeto en 4ª lugar")
 
 print(l2.count(3))#busca el elemento y lo cuenta las veces en q se repita
 
-print(l2.index(3,3,7))
+print(l2.index(3,3,7))#busca coincidencias a partir del inicio y fin de la lista
 print(l2)
 
 
