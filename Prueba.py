@@ -63,7 +63,7 @@ d3=dict()#diccionario vacio
 
 l2.append([3,2,1])#inserta el objeto en lista como único elemento
 l2.extend([3,2,(2,"Dos","11"),1])#añade como elementos a la lista
-l2.insert(3,"Objeto en 4ª lugar")
+l2.insert(3,"Objeto en 4ª lugar")#añade en el lugar el objeto descrito
 
 print(l2.count(3))#busca el elemento y lo cuenta las veces en q se repita
 
