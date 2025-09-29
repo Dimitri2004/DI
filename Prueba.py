@@ -173,6 +173,23 @@ for n in x3 :
 print(l7)
 
 #Decoradores
+#Añadir funcionalidad sin tocar la original
+
+def funcion_necesita_decoracion():
+    print("precio decoracion")
+
+
+def mi_decorador(funcion_origen):
+    def funcion_envolvente():
+        print("Intrucciones antes de funcion original")
+        funcion_origen()
+        print("Instrucciones para despues de funcion origen")
+    return funcion_envolvente
+
+funcion_necesita_decoracion= mi_decorador(funcion_necesita_decoracion)#Se emplea para realizar pruebas previas y posteriores
+
+funcion_necesita_decoracion()
+
 
 
 
