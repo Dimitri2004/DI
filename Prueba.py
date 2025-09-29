@@ -165,8 +165,14 @@ def mi_range(fin,inicio=0,salto=1):
         inicio = inicio + salto
 
 x3=mi_range(inicio=4,fin=99,salto=15) #generador de rango
+
+l7=[n for n in x3]
+
 for n in x3 :
-    print(n)
+    print(n)#ejecucion de una sola vez
+print(l7)
+
+#Decoradores
 
 
 
