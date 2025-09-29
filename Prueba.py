@@ -135,5 +135,18 @@ print(l3)
 
 l4=[n for n in l6 if n%2==0]
 print(l4)
+m=["=","*"]
+z=[]
+for s in m:
+    for n in l6:
+        if n<4:
+            z.append(n*s)#añade elementos n veces como elemento menor que cuatro
+
+print(z)
+
+z2=[n*s for s in m
+    for n in l6
+    if n<4]#forma parecida de hacerlo pero mas compacta
+print(z2)
 
 
