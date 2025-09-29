@@ -7,6 +7,8 @@
     Diccionarios
 
 """
+from pkg_resources import yield_lines
+
 #Listas
 l=[23, 4.20, 16-3j, "albatros", -5, 22,[34,"Manuel"],4>>1,~5]
 print(type(l))
@@ -150,5 +152,22 @@ z2=[n*s for s in m
     for n in l6
     if n<4]#forma parecida de hacerlo pero mas compacta
 print(z2)
+
+
+x2=(n**2 for n in l6)#objeto generador de datos
+
+for n in x2:
+    print(n)#saca datos elevados a 2
+
+def mi_range(fin,inicio=0,salto=1):
+    while inicio<=fin :
+        yield inicio #retorna valor pero continua ejecutandose sin salir del bucle
+        inicio = inicio + salto
+
+x3=mi_range(inicio=4,fin=99,salto=15) #generador de rango
+for n in x3 :
+    print(n)
+
+
 
 
