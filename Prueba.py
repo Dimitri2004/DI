@@ -99,13 +99,26 @@ def saudar (lingua):
         print("Hello")
     def saludar_ru():
         print("привет")
+    def saludar_ma():
+        print("هيلو")
     #diccionario
     func_saudo={"es":saudar_es,#solo hacemos referencia
                 "gl":saudar_gl,
                 "en":saudar_en,
-                "ru":saludar_ru}
+                "ru":saludar_ru,
+                "ma":saludar_ma}
 
     return func_saudo[lingua] #devuelve del diccionario el codigo elegido
 f=saudar("ru")#guara la referencia pero no el contenido
 print(f)#muestra referencia
 f()#desglosa el contenido
+saudar("ma")()
+
+l6=[1,2,3,4]
+
+def es_par(n):
+    return n%2==0
+
+l2= filter(es_par,l6)#compara numeros de l6 con funcion es_par
+
+
