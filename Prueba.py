@@ -75,4 +75,15 @@ t3=l2[::-1]#la devuelve desinvirtiendola
 print("Elemento extraido :",extraer)
 print(l2)
 print(t3)
+l4=[3,4,6,10,45,8]
+#print(l2.sort(reverse=True))#ordena listas de manera inversa
 
+l5=["un","dos","tres","cuatro","cinco"]
+l5.sort(key=len)
+print(l5)
+tabla_alturas=[("Manuel",1.17),("Pepe",2.05),("Ana",1.76)]#tabla de personas con alturas
+def altura(persoa):
+    return persoa[1]
+
+tabla_alturas.sort(key=altura)
+print(tabla_alturas)
