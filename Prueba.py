@@ -99,7 +99,10 @@ def saudar (lingua):
         print("Hello")
     def saludar_ru():
         print("привет")
+    #diccionario
     func_saudo={"es":saudar_es,#solo hacemos referencia
                 "gl":saudar_gl,
                 "en":saudar_en,
                 "ru":saludar_ru}
+
+    return func_saudo[lingua] #devuelve del diccionario el codigo elegido
