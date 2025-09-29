@@ -87,3 +87,19 @@ def altura(persoa):
 
 tabla_alturas.sort(key=altura)
 print(tabla_alturas)
+
+
+
+def saudar (lingua):
+    def saudar_es():
+        print("Hola")
+    def saudar_gl():
+        print("Ola")
+    def saudar_en():
+        print("Hello")
+    def saludar_ru():
+        print("привет")
+    func_saudo={"es":saudar_es,#solo hacemos referencia
+                "gl":saudar_gl,
+                "en":saudar_en,
+                "ru":saludar_ru}
