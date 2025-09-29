@@ -88,7 +88,7 @@ def altura(persoa):
 tabla_alturas.sort(key=altura)
 print(tabla_alturas)
 
-
+#Funciones y diccionarios
 
 def saudar (lingua):
     def saudar_es():
