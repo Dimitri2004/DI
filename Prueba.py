@@ -101,6 +101,8 @@ def saudar (lingua):
         print("привет")
     def saludar_ma():
         print("هيلو")
+    def saludar_be():
+        print("ফলের")
     #diccionario
     func_saudo={"es":saudar_es,#solo hacemos referencia
                 "gl":saudar_gl,
@@ -118,7 +120,20 @@ l6=[1,2,3,4]
 
 def es_par(n):
     return n%2==0
+l2= filter(es_par,l6)#compara numeros de l6 con funcion es_par para sacar pares
 
-l2= filter(es_par,l6)#compara numeros de l6 con funcion es_par
+l2= filter(lambda n: n % 2 == 0, l6)
+
+for n in l2:
+    print(n)
+#Filtrar y trabajar con listas
+#Filter,map,reduce
+
+l3=[n+1 for n in l6]#sumamos uno a cada elemento de l
+
+print(l3)
+
+l4=[n for n in l6 if n%2==0]
+print(l4)
 
 
