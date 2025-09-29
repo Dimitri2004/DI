@@ -108,13 +108,15 @@ def saudar (lingua):
                 "gl":saudar_gl,
                 "en":saudar_en,
                 "ru":saludar_ru,
-                "ma":saludar_ma}
+                "ma":saludar_ma,
+                "be":saludar_be}
 
     return func_saudo[lingua] #devuelve del diccionario el codigo elegido
 f=saudar("ru")#guara la referencia pero no el contenido
 print(f)#muestra referencia
 f()#desglosa el contenido
 saudar("ma")()
+saudar("be")()
 
 l6=[1,2,3,4]
 
