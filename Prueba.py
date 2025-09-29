@@ -79,11 +79,11 @@ l4=[3,4,6,10,45,8]
 #print(l2.sort(reverse=True))#ordena listas de manera inversa
 
 l5=["un","dos","tres","cuatro","cinco"]
-l5.sort(key=len)
+l5.sort(key=len)#ordena por tamaño de frase
 print(l5)
 tabla_alturas=[("Manuel",1.17),("Pepe",2.05),("Ana",1.76)]#tabla de personas con alturas
 def altura(persoa):
-    return persoa[1]
+    return persoa[1]#ordena por altura de menor a mayor
 
 tabla_alturas.sort(key=altura)
 print(tabla_alturas)
