@@ -106,3 +106,6 @@ def saudar (lingua):
                 "ru":saludar_ru}
 
     return func_saudo[lingua] #devuelve del diccionario el codigo elegido
+f=saudar("ru")#guara la referencia pero no el contenido
+print(f)#muestra referencia
+f()#desglosa el contenido
