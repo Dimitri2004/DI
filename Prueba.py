@@ -219,6 +219,7 @@ def log(fichero_log):#crea log
         return decorador_funcion
     return decorador_log
 
+
 @log('fichero.log')#recoge datos
 def suma(a,b):
     return a+b
