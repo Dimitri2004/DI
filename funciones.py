@@ -23,3 +23,17 @@ except (ZeroDivisionError,TypeError) as e:#recoge doble error en un solo print
 else:
     print("El resultado de la operacion es: "+str(resultado))
 
+class Persona4:
+    """Clase para definir unha persoa"""
+    def __init__(self, nome,dni,edade):
+        self.nome = nome
+        self.dni = dni
+        self.edade = self.comprobar_edad(edade)
+
+
+    def comprobar_edad(self,edad):
+        if 0 <= edad < 100:
+            return edad
+        else:
+            return 0
+
