@@ -209,30 +209,32 @@ sauda()
 #requiere_autentificacion(sauda)() otro metodo para hacerlo
 
 
-def log(fichero_log):
-    def decorador_log(func):
-        def decorador_funcion(*args, **kwargs):
+def log(fichero_log):#crea log
+    def decorador_log(func):#añade datos
+        def decorador_funcion(*args, **kwargs):#argumentos que necesita
             with open(fichero_log, 'a') as fichero_abierto:
-                saida=func(*args, **kwargs)
+                saida=func(*args, **kwargs)#asigna datos
                 fichero_abierto.write (f"{saida}\n")#crea linea por resultado de escritura y salida del fichero
         return decorador_funcion
     return decorador_log
 
-@log('fichero,log')#recoge datos
+@log('fichero.log')#recoge datos
 def suma(a,b):
     return a+b
 
-@log('fichero,log')#recoge datos
+@log('fichero.log')#recoge datos
 def resta(a,b):
     return a-b
 
-@log('fichero,log')#recoge datos
+@log('fichero.log')#recoge datos
 def mult(a,b):
     return a*b
 
 suma(1,1)
 resta(7,25)
 mult(8,1)
+
+log('fichero.log')(suma)(2,2)
 
 
 
