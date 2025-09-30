@@ -218,15 +218,19 @@ def log(fichero_log):
         return decorador_funcion
     return decorador_log
 
-
-
-
+@log('fichero,log')#recoge datos
 def suma(a,b):
     return a+b
+
+@log('fichero,log')#recoge datos
 def resta(a,b):
     return a-b
+
+@log('fichero,log')#recoge datos
 def mult(a,b):
     return a*b
+
+
 
 
 
