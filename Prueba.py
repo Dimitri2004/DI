@@ -232,7 +232,7 @@ def mult(a,b):
 
 suma(1,1)
 resta(7,25)
-mult(4,8)
+mult(8,1)
 
 
 
