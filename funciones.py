@@ -23,17 +23,32 @@ except (ZeroDivisionError,TypeError) as e:#recoge doble error en un solo print
 else:
     print("El resultado de la operacion es: "+str(resultado))
 
+
+
+class ErroIdade(Exception):
+    def __init__(self, edade):
+        self.edade=edade
+    def __str__(self):
+        return "Error edad inadecuada :"+str(self.edade) + "incorrecta"
+
+
+
 class Persona4:
     """Clase para definir unha persoa"""
-    def __init__(self, nome,dni,edade):
+    def __init__(self, nome,dni,edade,**outros):
         self.nome = nome
         self.dni = dni
-        self.edade = self.comprobar_edad(edade)
+        self.edade = self.comprobarIdade(edade)
 
 
-    def comprobar_edad(self,edad):
-        if 0 <= edad < 100:
-            return edad
+    def comprobarIdade(self,edade):
+        if edade >=0 and edade < 100:
+            return edade
         else:
-            return 0
+            return ErroIdade(edade)
+try:
+    pepe = Persona4("Pepe","456k",30)
 
+    juan = Persona4("Juan","456h",-60)
+except ErroIdade as e:
+    print("Error en creacion de persoa : "+str(e))
