@@ -18,6 +18,6 @@ finally:
 
 try:
     division(n1,n2)
-except (ZeroDivisionError,TypeError):#recoge doble error en un solo print
-    print("Error al realizar division")
+except (ZeroDivisionError,TypeError) as e:#recoge doble error en un solo print
+    print("Error al realizar division "+str(e))
 
