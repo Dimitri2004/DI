@@ -230,6 +230,9 @@ def resta(a,b):
 def mult(a,b):
     return a*b
 
+suma(1,1)
+resta(7,25)
+mult(4,8)
 
 
 
