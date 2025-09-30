@@ -190,6 +190,24 @@ def funcion_necesita_decoracion():
 #funcion_necesita_decoracion= mi_decorador(funcion_necesita_decoracion)#Se emplea para realizar pruebas previas y posteriores
 funcion_necesita_decoracion()
 
+autenticado = False #True para permitirle saludar
+
+def requiere_autentificacion(f):
+    def funcion_decorada(*args, **kwargs):
+        if autenticado:
+            return f(*args, **kwargs)
+        else:
+            print ("Error el usuario no esta autenticado")
+    return funcion_decorada
+
+@requiere_autentificacion #recoge como paramentro la funcion de sauda
+def sauda():
+    print ("Hola")
+
+
+sauda()
+#requiere_autentificacion(sauda)() otro metodo para hacerlo
+
 
 
 
