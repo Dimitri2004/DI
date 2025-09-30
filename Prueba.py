@@ -209,6 +209,23 @@ sauda()
 #requiere_autentificacion(sauda)() otro metodo para hacerlo
 
 
+def log(fichero_log):
+    def decorador_log(func):
+        def decorador_funcion(*args, **kwargs):
+            with open(fichero_log, 'a') as fichero_abierto:
+                saida=func(*args, **kwargs)
+                fichero_abierto.write (f"{saida}\n")#crea linea por resultado
+
+
+
+
+def suma(a,b):
+    return a+b
+def resta(a,b):
+    return a-b
+def mult(a,b):
+    return a*b
+
 
 
 
