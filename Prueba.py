@@ -234,7 +234,7 @@ suma(1,1)
 resta(7,25)
 mult(8,1)
 
-log('fichero.log')(suma)(2,2)
+# log('fichero.log')(suma)(2,2) otra forma de hacerlo
 
 
 
