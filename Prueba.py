@@ -214,7 +214,7 @@ def log(fichero_log):
         def decorador_funcion(*args, **kwargs):
             with open(fichero_log, 'a') as fichero_abierto:
                 saida=func(*args, **kwargs)
-                fichero_abierto.write (f"{saida}\n")#crea linea por resultado
+                fichero_abierto.write (f"{saida}\n")#crea linea por resultado de escritura y salida del fichero
         return decorador_funcion
     return decorador_log
 
