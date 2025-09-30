@@ -214,6 +214,7 @@ def log(fichero_log):#crea log
         def decorador_funcion(*args, **kwargs):#argumentos que necesita
             with open(fichero_log, 'a') as fichero_abierto:
                 saida=func(*args, **kwargs)#asigna datos
+                fichero_abierto.write(f"{func.__name__}\t")#asigna funcion empleada a cada salida
                 fichero_abierto.write (f"{saida}\n")#crea linea por resultado de escritura y salida del fichero
         return decorador_funcion
     return decorador_log
@@ -231,6 +232,7 @@ def mult(a,b):
     return a*b
 
 suma(1,1)
+print(suma(1,1))
 resta(7,25)
 mult(8,1)
 
