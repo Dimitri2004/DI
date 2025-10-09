@@ -23,7 +23,6 @@ class NuestraPrimeraVentana (QMainWindow):
         self.lblEtiqueta.setAlignment(Qt.AlignmentFlag.AlignHCenter| Qt.AlignmentFlag.AlignVCenter)
 
 
-
         self.show()
         #self.hide() esconde ventana
 
