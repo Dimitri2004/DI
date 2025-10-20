@@ -1,65 +1,112 @@
-import sys
+import sys,Ventana2
 
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget)
+from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox,
+                             QHBoxLayout)
+
+class PrimeraVentana(QMainWindow):
+    def on_btnSaudo_clicked(self):
+        nome = self.txtSaudo.text().strip()
+        print("Pulsado")
+        if nome != "" :
+            print(nome)
+            self.lblEtiqueta.setText("Hola "+nome)
+
+        self.on_btnMaiusculas_toggled()
+        self.txtSaudo.clear()
+
+    def on_btnVolver_clicked(self):
+        self.close()
+        self.vV.show()
+
+    def on_btnMaiusculas_toggled(self):
+        print("cambio")
+        if self.chkMaiusculas.isChecked():
+            self.lblEtiqueta.setText(self.lblEtiqueta.text().upper())
+            self.txtSaudo.setText(self.txtSaudo.text().upper()) # esta linea no funciona
+            self.maiusculas = True
+        else:
+            self.lblEtiqueta.setText(self.lblEtiqueta.text().lower())
+            self.txtSaudo.setText(self.txtSaudo.text().lower()) # esta linea tampoco
+            self.maiusculas = False
+
+    def on_cambio_texto(self):
+        if self.maiusculas:
+            self.txtSaudo.setText(self.txtSaudo.text().upper())
+        else:
+            self.txtSaudo.setText(self.txtSaudo.text().lower())
 
 
-#QVBoxLayout - añade controles en vertical
-#QHBoxLayout - añade controles en horizontal
-
-class NuestraPrimeraVentana (QMainWindow):
-
-    def on_btnSaludo_clicked(self):
-        nome = self.txtSaludo.text()
-        nome= nome.strip()
-        self.txtSaludo.clear()
-        self.txtSaludo.setText("")
-        self.lblEtiqueta.setText("Hola "+ nome)
-
-    #boton que cree otra ventana y que al volver a pulsar returne a la principal
+    def on_chkOculto_toogled(self):
+        if self.chkOculto.isChecked():
+            self.saludo = self.txtSaudo.text()
+            self.txtSaudo.setText("*" * len(self.saludo))
+        else:
+            self.txtSaudo.setText(self.saludo)
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Mi primera Ventana con QT")
-        self.setMinimumSize(500,300)
+        self.vV = Ventana2.VentanaHija(self)
+        self.vV.hide()
+        self.setWindowTitle("Primera ventana con QT")
+        self.setMinimumSize(400,300)
 
-        self.txtSaludo = QLineEdit()
+        caixaV = QVBoxLayout()
+
+        self.txtSaudo = QLineEdit()
+        self.txtSaudo.setPlaceholderText("Introduce tu nombre")
+        self.txtSaudo.returnPressed.connect(self.on_btnSaudo_clicked)
+        self.txtSaudo.textChanged.connect(self.on_cambio_texto)
+
+        btnSaudo = QPushButton("Saúdo")
+        btnSaudo.clicked.connect(self.on_btnSaudo_clicked)
+
+        """ cambiamos de un boton normal a una checkBox
+        self.btnMaiuscula = QPushButton("Maiúsculas")
+        self.btnMaiuscula.setCheckable(True)
+        self.btnMaiuscula.setChecked(True)
+        self.btnMaiuscula.toggled.connect(self.on_btnMaiusculas_toggled)
+        """
+        self.chkMaiusculas = QCheckBox("Maiusculas")
+        self.chkMaiusculas.setChecked(False)
+        self.chkMaiusculas.toggled.connect(self.on_btnMaiusculas_toggled)
+        self.maiusculas = False
+
+        self.chkOculto = QCheckBox("Ocultar")
+        self.chkOculto.setChecked(False)
+        self.chkOculto.toggled.connect(self.on_chkOculto_toogled)
+        self.oculto = False
+
+
+        btnVolver = QPushButton("Volver")
+        btnVolver.clicked.connect(self.on_btnVolver_clicked)
 
         self.lblEtiqueta = QLabel("Hola a todos")
+        self.lblEtiqueta.setText("Hola Mundo")
+        fonte = self.lblEtiqueta.font()
+        fonte.setPointSize(30)
+        self.lblEtiqueta.setFont(fonte)
+        self.lblEtiqueta.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
 
-        self.txtSaludo= QLineEdit()
-        self.txtSaludo.setPlaceholderText("Introduce o teu nome")
-        self.txtSaludo.returnPressed.connect(self.on_btnSaludo_clicked)
-
-        fuente = self.lblEtiqueta.font()
-        fuente.setPointSize(30)
-        self.lblEtiqueta.setFont(fuente)
-
-        self.lblEtiqueta.setAlignment(Qt.AlignmentFlag.AlignHCenter| Qt.AlignmentFlag.AlignVCenter)
-
-
-
-        btnSaludo = QPushButton("Saludo")
-
-        btnSaludo.clicked.connect(self.on_btnSaludo_clicked)
-
-        caixaV=QVBoxLayout()
 
         caixaV.addWidget(self.lblEtiqueta)
-        caixaV.addWidget(self.txtSaludo)
-        caixaV.addWidget(btnSaludo)
+        caixaV.addWidget(self.txtSaudo)
+        caixaV.addWidget(btnSaudo)
+        caixaV.addWidget(btnVolver)
 
-        container = QWidget()
-        container.setLayout(caixaV)
+        caixaH = QHBoxLayout()
+        caixaH.addWidget(self.chkMaiusculas)
+        caixaH.addWidget(self.chkOculto)
+        caixaV.addLayout(caixaH)
+        contaniner = QWidget()
+        contaniner.setLayout(caixaV)
 
-
-        self.setCentralWidget(container)
+        self.setCentralWidget(contaniner)
         self.show()
-        #self.hide() esconde ventana
 
 if __name__ == "__main__":
     aplicacion = QApplication(sys.argv)
-    ventana= NuestraPrimeraVentana()
+    ventana = PrimeraVentana()
     aplicacion.exec()
 
 
