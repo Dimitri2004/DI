@@ -6,7 +6,11 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QLabel, QLi
 
 class PrimeraVentana(QMainWindow):
     def on_btnSaudo_clicked(self):
-        nome = self.txtSaudo.text().strip()
+        if self.chkOculto.isChecked():
+            nome = self.nomeOculto
+        else:
+            nome=self.txtSaudo.text()
+        nome=nome.strip()
         print("Pulsado")
         if nome != "" :
             print(nome)
@@ -14,6 +18,8 @@ class PrimeraVentana(QMainWindow):
 
         self.on_btnMaiusculas_toggled()
         self.txtSaudo.clear()
+        self.nomeOculto=''
+        self.txtSaudo.setText('')
 
     def on_btnVolver_clicked(self):
         self.close()
@@ -35,14 +41,25 @@ class PrimeraVentana(QMainWindow):
             self.txtSaudo.setText(self.txtSaudo.text().upper())
         else:
             self.txtSaudo.setText(self.txtSaudo.text().lower())
+        nome =self.txtSaudo.text()
+        if self.chkOculto.isChecked():
+            for i,caracter in enumerate(nome):
+                if caracter != '*':
+                    if len(self.nomeOculto)== i:
+                        self.nomeOculto=self.nomeOculto + caracter
+                        break
+                    else:
+                        self.nomeOculto=self.nomeOculto[:i] + caracter + self.nomeOculto[i+1:]
+            self.txtSaudo.setText('*'*len(self.nomeOculto))
 
 
     def on_chkOculto_toogled(self):
         if self.chkOculto.isChecked():
             self.saludo = self.txtSaudo.text()
-            self.txtSaudo.setText("*" * len(self.saludo))
+            self.txtSaudo.setText("*" *len(self.nomeOculto))
         else:
-            self.txtSaudo.setText(self.saludo)
+            self.txtSaudo.setText(self.nomeOculto)
+            self.nomeOculto=''
 
     def __init__(self):
         super().__init__()
@@ -50,6 +67,7 @@ class PrimeraVentana(QMainWindow):
         self.vV.hide()
         self.setWindowTitle("Primera ventana con QT")
         self.setMinimumSize(400,300)
+        self.nomeOculto=""
 
         caixaV = QVBoxLayout()
 
@@ -108,6 +126,7 @@ if __name__ == "__main__":
     aplicacion = QApplication(sys.argv)
     ventana = PrimeraVentana()
     aplicacion.exec()
+
 
 
 
