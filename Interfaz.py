@@ -30,6 +30,7 @@ class Interfaz(QMainWindow):
         self.lstOculta = QListView()
         self.lstVisible = QListView()
         self.lstVisible.setModel(self.modeloListaVisibles)
+        self.lstVisible.set
         self.lstOculta.setModel(self.modeloListaOcultos)
 
         maia.addWidget(lblFollasVisibles)
